@@ -82,7 +82,7 @@
     name: "{{ service_account }}"
     namespace: "{{ namespace }}"
     annotations:
-      serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Service","name":"cinder-api"}}'
+      serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Service","name":"cinder"}}'
 
 - name: Create Cinder-api Deployment
   k8s_apps_v1beta1_deployment:
