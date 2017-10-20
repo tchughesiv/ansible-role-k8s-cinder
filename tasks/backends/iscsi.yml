@@ -92,6 +92,8 @@
     name: cinder-volume-iscsi
     namespace: "{{ namespace }}"
     service_account_name: '{{ privileged_service_account }}'
+    node_selector:
+      controller: "true"
     labels:
       app: cinder-volume-iscsi
       service: cinder-volume-iscsi
